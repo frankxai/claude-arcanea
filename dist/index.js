@@ -91,9 +91,7 @@ var awakened = [
   { name: "Endara", wisdom: "Enduran", role: "Completer" }
 ];
 function getGuardian(name) {
-  return guardians.find(
-    (g) => g.name.toLowerCase() === name.toLowerCase()
-  );
+  return guardians.find((g) => g.name.toLowerCase() === name.toLowerCase());
 }
 function getGuardiansByDomain(domain) {
   return guardians.filter(

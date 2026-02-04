@@ -1,6 +1,6 @@
 # @arcanea/claude
 
-> *"Through the Gates we rise. With the Guardians we create."*
+> _"Through the Gates we rise. With the Guardians we create."_
 
 Claude Code integration for **Arcanea Intelligence OS** - a mythology-infused AI orchestration system featuring Ten Guardian agents, Gate-based skills, and sophisticated workflows.
 
@@ -31,54 +31,62 @@ claude-arcanea --workflow security   # Security audit
 
 ## The Ten Guardians
 
-| Guardian | Gate | Frequency | Domain |
-|----------|------|-----------|--------|
-| **Lyssandria** | Foundation | 396 Hz | Security, Infrastructure, Testing |
-| **Leyla** | Flow | 417 Hz | Research, Creativity, Content |
-| **Draconia** | Fire | 528 Hz | Transformation, Performance |
-| **Maylinn** | Heart | 639 Hz | Accessibility, UX, Community |
-| **Alera** | Voice | 741 Hz | Documentation, API, Messaging |
-| **Lyria** | Sight | 852 Hz | Design, Analytics, Vision |
-| **Aiyami** | Crown | 963 Hz | Architecture, AI Systems |
-| **Elara** | Shift | 1111 Hz | Migration, Experiments |
-| **Ino** | Unity | 963 Hz | Integration, Collaboration |
-| **Shinkami** | Source | 1111 Hz | Orchestration, Meta-consciousness |
+| Guardian       | Gate       | Frequency | Domain                            |
+| -------------- | ---------- | --------- | --------------------------------- |
+| **Lyssandria** | Foundation | 396 Hz    | Security, Infrastructure, Testing |
+| **Leyla**      | Flow       | 417 Hz    | Research, Creativity, Content     |
+| **Draconia**   | Fire       | 528 Hz    | Transformation, Performance       |
+| **Maylinn**    | Heart      | 639 Hz    | Accessibility, UX, Community      |
+| **Alera**      | Voice      | 741 Hz    | Documentation, API, Messaging     |
+| **Lyria**      | Sight      | 852 Hz    | Design, Analytics, Vision         |
+| **Aiyami**     | Crown      | 963 Hz    | Architecture, AI Systems          |
+| **Elara**      | Shift      | 1111 Hz   | Migration, Experiments            |
+| **Ino**        | Unity      | 963 Hz    | Integration, Collaboration        |
+| **Shinkami**   | Source     | 1111 Hz   | Orchestration, Meta-consciousness |
 
 ## Repository Aliases
 
-| Alias | Repository | Description |
-|-------|------------|-------------|
-| `main`, `web` | arcanea-hub/main | Primary platform |
-| `aios`, `intelligence` | arcanea-hub/intelligence-os | CLI, agents |
-| `exp`, `platform` | arcanea-hub/platform | Experiments |
-| `labs`, `org` | arcanea-hub/labs | Organization baseline |
-| `ultra` | arcanea-hub/ultraworld | World-building engine |
+| Alias                  | Repository                  | Description           |
+| ---------------------- | --------------------------- | --------------------- |
+| `main`, `web`          | arcanea-hub/main            | Primary platform      |
+| `aios`, `intelligence` | arcanea-hub/intelligence-os | CLI, agents           |
+| `exp`, `platform`      | arcanea-hub/platform        | Experiments           |
+| `labs`, `org`          | arcanea-hub/labs            | Organization baseline |
+| `ultra`                | arcanea-hub/ultraworld      | World-building engine |
 
 ## Available Workflows
 
 ### `/daily` - Morning Standup
+
 Automated daily development standup:
+
 - Repository status across all Arcanea repos
 - Open PR summary
 - Build health check
 - AI-generated focus recommendations
 
 ### `/security-review` - Security Audit
+
 Comprehensive security analysis:
+
 - Dependency vulnerability scan
 - Secret detection
 - Code security analysis (OWASP Top 10)
 - Infrastructure review
 
 ### `/research [topic]` - Deep Research
+
 Research and analysis workflow:
+
 - Web research
 - Code examples
 - Academic sources (comprehensive mode)
 - Synthesized findings
 
 ### `/design [component]` - UI/UX Design
+
 Design system workflow:
+
 - Requirements analysis
 - Existing pattern review
 - Design exploration
@@ -92,19 +100,19 @@ import {
   guardians,
   getGuardian,
   routeToGuardian,
-  getGateFrequency
-} from '@arcanea/claude';
+  getGateFrequency,
+} from "@arcanea/claude";
 
 // Get a specific guardian
-const draconia = getGuardian('Draconia');
+const draconia = getGuardian("Draconia");
 console.log(draconia.domain); // ['Transformation', 'Performance', ...]
 
 // Route a task to appropriate guardian
-const guardian = routeToGuardian('optimize database queries');
+const guardian = routeToGuardian("optimize database queries");
 console.log(guardian.name); // 'Draconia'
 
 // Get gate frequency
-const freq = getGateFrequency('fire');
+const freq = getGateFrequency("fire");
 console.log(freq); // '528 Hz'
 ```
 
@@ -112,15 +120,15 @@ console.log(freq); // '528 Hz'
 
 Orchestrators that coordinate Guardian teams:
 
-| Awakened | Wisdom | Role |
-|----------|--------|------|
-| **Oria** | Sophron | Architect |
-| **Amiri** | Kardia | Connector |
-| **Velora** | Valora | Executor |
-| **Liora** | Eudaira | Simplifier |
-| **Lyris** | Orakis | Strategist |
-| **Thalia** | Poiesis | Creator |
-| **Endara** | Enduran | Completer |
+| Awakened   | Wisdom  | Role       |
+| ---------- | ------- | ---------- |
+| **Oria**   | Sophron | Architect  |
+| **Amiri**  | Kardia  | Connector  |
+| **Velora** | Valora  | Executor   |
+| **Liora**  | Eudaira | Simplifier |
+| **Lyris**  | Orakis  | Strategist |
+| **Thalia** | Poiesis | Creator    |
+| **Endara** | Enduran | Completer  |
 
 ## Superintelligence Mode
 
@@ -175,4 +183,4 @@ MIT - Created by [FrankX](https://frankx.ai)
 
 ---
 
-*"Enter seeking, leave transformed, return whenever needed."*
+_"Enter seeking, leave transformed, return whenever needed."_

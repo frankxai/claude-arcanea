@@ -13,22 +13,11 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    },
-    "./skills": {
-      "types": "./dist/skills/index.d.ts",
-      "import": "./dist/skills/index.js"
-    },
-    "./guardians": {
-      "types": "./dist/guardians/index.d.ts",
-      "import": "./dist/guardians/index.js"
     }
   },
   "files": [
     "dist",
-    "CLAUDE.md",
-    "README.md",
-    "skills",
-    "workflows"
+    "README.md"
   ],
   "scripts": {
     "build": "tsup src/index.ts src/cli.ts --format esm --dts --clean",
@@ -64,10 +53,10 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.12",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.55.0",
-    "prettier": "^3.1.1",
+    "prettier": "^3.8.1",
     "tsup": "^8.0.0",
     "typescript": "^5.5.4",
     "vitest": "^1.0.0"

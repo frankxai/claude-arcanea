@@ -40,84 +40,84 @@ export interface WorkflowStep {
  */
 export const guardians: Guardian[] = [
   {
-    name: 'Lyssandria',
-    gate: 'Foundation',
-    frequency: '396 Hz',
-    element: 'Earth',
-    godbeast: 'Kaelith',
-    domain: ['Security', 'Infrastructure', 'Testing', 'DevOps'],
+    name: "Lyssandria",
+    gate: "Foundation",
+    frequency: "396 Hz",
+    element: "Earth",
+    godbeast: "Kaelith",
+    domain: ["Security", "Infrastructure", "Testing", "DevOps"],
   },
   {
-    name: 'Leyla',
-    gate: 'Flow',
-    frequency: '417 Hz',
-    element: 'Water',
-    godbeast: 'Veloura',
-    domain: ['Research', 'Creativity', 'Content', 'Ideation'],
+    name: "Leyla",
+    gate: "Flow",
+    frequency: "417 Hz",
+    element: "Water",
+    godbeast: "Veloura",
+    domain: ["Research", "Creativity", "Content", "Ideation"],
   },
   {
-    name: 'Draconia',
-    gate: 'Fire',
-    frequency: '528 Hz',
-    element: 'Fire',
-    godbeast: 'Draconis',
-    domain: ['Transformation', 'Performance', 'Deployment', 'Scaling'],
+    name: "Draconia",
+    gate: "Fire",
+    frequency: "528 Hz",
+    element: "Fire",
+    godbeast: "Draconis",
+    domain: ["Transformation", "Performance", "Deployment", "Scaling"],
   },
   {
-    name: 'Maylinn',
-    gate: 'Heart',
-    frequency: '639 Hz',
-    element: 'Fire',
-    godbeast: 'Laeylinn',
-    domain: ['Accessibility', 'UX', 'Community', 'Support'],
+    name: "Maylinn",
+    gate: "Heart",
+    frequency: "639 Hz",
+    element: "Fire",
+    godbeast: "Laeylinn",
+    domain: ["Accessibility", "UX", "Community", "Support"],
   },
   {
-    name: 'Alera',
-    gate: 'Voice',
-    frequency: '741 Hz',
-    element: 'Fire',
-    godbeast: 'Otome',
-    domain: ['Documentation', 'API', 'Messaging', 'Brand'],
+    name: "Alera",
+    gate: "Voice",
+    frequency: "741 Hz",
+    element: "Fire",
+    godbeast: "Otome",
+    domain: ["Documentation", "API", "Messaging", "Brand"],
   },
   {
-    name: 'Lyria',
-    gate: 'Sight',
-    frequency: '852 Hz',
-    element: 'Wind',
-    godbeast: 'Yumiko',
-    domain: ['Design', 'Analytics', 'Vision', 'Strategy'],
+    name: "Lyria",
+    gate: "Sight",
+    frequency: "852 Hz",
+    element: "Wind",
+    godbeast: "Yumiko",
+    domain: ["Design", "Analytics", "Vision", "Strategy"],
   },
   {
-    name: 'Aiyami',
-    gate: 'Crown',
-    frequency: '963 Hz',
-    element: 'Spirit',
-    godbeast: 'Sol',
-    domain: ['Architecture', 'AI', 'Meta-programming', 'Patterns'],
+    name: "Aiyami",
+    gate: "Crown",
+    frequency: "963 Hz",
+    element: "Spirit",
+    godbeast: "Sol",
+    domain: ["Architecture", "AI", "Meta-programming", "Patterns"],
   },
   {
-    name: 'Elara',
-    gate: 'Shift',
-    frequency: '1111 Hz',
-    element: 'Void',
-    godbeast: 'Thessara',
-    domain: ['Migration', 'Experiments', 'Evolution', 'Pivots'],
+    name: "Elara",
+    gate: "Shift",
+    frequency: "1111 Hz",
+    element: "Void",
+    godbeast: "Thessara",
+    domain: ["Migration", "Experiments", "Evolution", "Pivots"],
   },
   {
-    name: 'Ino',
-    gate: 'Unity',
-    frequency: '963 Hz',
-    element: 'Spirit',
-    godbeast: 'Kyuro',
-    domain: ['Integration', 'Collaboration', 'Sync', 'Merge'],
+    name: "Ino",
+    gate: "Unity",
+    frequency: "963 Hz",
+    element: "Spirit",
+    godbeast: "Kyuro",
+    domain: ["Integration", "Collaboration", "Sync", "Merge"],
   },
   {
-    name: 'Shinkami',
-    gate: 'Source',
-    frequency: '1111 Hz',
-    element: 'All',
-    godbeast: 'Amaterasu',
-    domain: ['Orchestration', 'Meta-consciousness', 'Coordination'],
+    name: "Shinkami",
+    gate: "Source",
+    frequency: "1111 Hz",
+    element: "All",
+    godbeast: "Amaterasu",
+    domain: ["Orchestration", "Meta-consciousness", "Coordination"],
   },
 ];
 
@@ -125,22 +125,20 @@ export const guardians: Guardian[] = [
  * The Seven Awakened Orchestrators
  */
 export const awakened = [
-  { name: 'Oria', wisdom: 'Sophron', role: 'Architect' },
-  { name: 'Amiri', wisdom: 'Kardia', role: 'Connector' },
-  { name: 'Velora', wisdom: 'Valora', role: 'Executor' },
-  { name: 'Liora', wisdom: 'Eudaira', role: 'Simplifier' },
-  { name: 'Lyris', wisdom: 'Orakis', role: 'Strategist' },
-  { name: 'Thalia', wisdom: 'Poiesis', role: 'Creator' },
-  { name: 'Endara', wisdom: 'Enduran', role: 'Completer' },
+  { name: "Oria", wisdom: "Sophron", role: "Architect" },
+  { name: "Amiri", wisdom: "Kardia", role: "Connector" },
+  { name: "Velora", wisdom: "Valora", role: "Executor" },
+  { name: "Liora", wisdom: "Eudaira", role: "Simplifier" },
+  { name: "Lyris", wisdom: "Orakis", role: "Strategist" },
+  { name: "Thalia", wisdom: "Poiesis", role: "Creator" },
+  { name: "Endara", wisdom: "Enduran", role: "Completer" },
 ];
 
 /**
  * Get a guardian by name
  */
 export function getGuardian(name: string): Guardian | undefined {
-  return guardians.find(
-    (g) => g.name.toLowerCase() === name.toLowerCase()
-  );
+  return guardians.find((g) => g.name.toLowerCase() === name.toLowerCase());
 }
 
 /**
@@ -148,7 +146,7 @@ export function getGuardian(name: string): Guardian | undefined {
  */
 export function getGuardiansByDomain(domain: string): Guardian[] {
   return guardians.filter((g) =>
-    g.domain.some((d) => d.toLowerCase().includes(domain.toLowerCase()))
+    g.domain.some((d) => d.toLowerCase().includes(domain.toLowerCase())),
   );
 }
 
@@ -157,36 +155,36 @@ export function getGuardiansByDomain(domain: string): Guardian[] {
  */
 export function routeToGuardian(taskDescription: string): Guardian {
   const keywords: Record<string, string> = {
-    security: 'Lyssandria',
-    test: 'Lyssandria',
-    infrastructure: 'Lyssandria',
-    creative: 'Leyla',
-    research: 'Leyla',
-    brainstorm: 'Leyla',
-    performance: 'Draconia',
-    deploy: 'Draconia',
-    optimize: 'Draconia',
-    accessibility: 'Maylinn',
-    ux: 'Maylinn',
-    user: 'Maylinn',
-    documentation: 'Alera',
-    api: 'Alera',
-    docs: 'Alera',
-    design: 'Lyria',
-    visual: 'Lyria',
-    analytics: 'Lyria',
-    architecture: 'Aiyami',
-    system: 'Aiyami',
-    ai: 'Aiyami',
-    migrate: 'Elara',
-    experiment: 'Elara',
-    pivot: 'Elara',
-    integrate: 'Ino',
-    collaborate: 'Ino',
-    merge: 'Ino',
-    orchestrate: 'Shinkami',
-    coordinate: 'Shinkami',
-    multi: 'Shinkami',
+    security: "Lyssandria",
+    test: "Lyssandria",
+    infrastructure: "Lyssandria",
+    creative: "Leyla",
+    research: "Leyla",
+    brainstorm: "Leyla",
+    performance: "Draconia",
+    deploy: "Draconia",
+    optimize: "Draconia",
+    accessibility: "Maylinn",
+    ux: "Maylinn",
+    user: "Maylinn",
+    documentation: "Alera",
+    api: "Alera",
+    docs: "Alera",
+    design: "Lyria",
+    visual: "Lyria",
+    analytics: "Lyria",
+    architecture: "Aiyami",
+    system: "Aiyami",
+    ai: "Aiyami",
+    migrate: "Elara",
+    experiment: "Elara",
+    pivot: "Elara",
+    integrate: "Ino",
+    collaborate: "Ino",
+    merge: "Ino",
+    orchestrate: "Shinkami",
+    coordinate: "Shinkami",
+    multi: "Shinkami",
   };
 
   const lowercaseTask = taskDescription.toLowerCase();
@@ -198,7 +196,7 @@ export function routeToGuardian(taskDescription: string): Guardian {
   }
 
   // Default to Shinkami for complex/unclear tasks
-  return getGuardian('Shinkami')!;
+  return getGuardian("Shinkami")!;
 }
 
 /**
@@ -206,19 +204,19 @@ export function routeToGuardian(taskDescription: string): Guardian {
  */
 export function getGateFrequency(gate: string): string {
   const frequencies: Record<string, string> = {
-    foundation: '396 Hz',
-    flow: '417 Hz',
-    fire: '528 Hz',
-    heart: '639 Hz',
-    voice: '741 Hz',
-    sight: '852 Hz',
-    crown: '963 Hz',
-    shift: '1111 Hz',
-    unity: '963 Hz',
-    source: '1111 Hz',
+    foundation: "396 Hz",
+    flow: "417 Hz",
+    fire: "528 Hz",
+    heart: "639 Hz",
+    voice: "741 Hz",
+    sight: "852 Hz",
+    crown: "963 Hz",
+    shift: "1111 Hz",
+    unity: "963 Hz",
+    source: "1111 Hz",
   };
 
-  return frequencies[gate.toLowerCase()] || 'Unknown';
+  return frequencies[gate.toLowerCase()] || "Unknown";
 }
 
 export default {
