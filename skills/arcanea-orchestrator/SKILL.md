@@ -18,6 +18,7 @@ Parse the user's input to determine which mode to activate:
 |-------|------|-------------|
 | `/arcanea-orchestrator` | **status** | Show current repo/branch/agent state |
 | `/arcanea-orchestrator status` | **status** | Same as above |
+| `/arcanea-orchestrator sync` | **sync** | Sync shared intelligence to all connected repos |
 | `/arcanea-orchestrator promote` | **promote** | Run the verified promotion workflow |
 | `/arcanea-orchestrator digest` | **digest** | Process pasted agent output efficiently |
 | `/arcanea-orchestrator coach` | **coach** | Teach Frank the optimal ops workflow |
@@ -329,6 +330,47 @@ git add docs/ops/SHORT_STATUS_AND_HANDOVER_{date}.md
 git commit -m "docs(ops): session handover {date}"
 git push origin main
 ```
+
+---
+
+## Mode: SYNC
+
+Sync shared `.arcanea/` intelligence to all connected repos.
+
+### Step 1: Run the sync script
+```bash
+bash .arcanea/scripts/ao-sync.sh
+```
+Or for a dry run first: `bash .arcanea/scripts/ao-sync.sh --dry-run`
+
+### Step 2: Verify
+Check the sync hit all repos:
+- `frankxai/arcanea` (OSS — canonical source)
+- `frankxai/arcanea-orchestrator` (shared-ops/)
+- `frankxai/arcanea-flow` (shared-ops/)
+- `frankxai/oh-my-arcanea` (shared-ops/)
+- `frankxai/claude-arcanea` (commands/, skills/)
+
+### When to sync
+- After changing any `.arcanea/ops/` file
+- After building new shared commands
+- After updating lore, config, or skills that other repos should see
+- NEVER sync product-specific files (planning-with-files, docs/ops handovers)
+
+### Repo Split Rule (All Agents Must Follow)
+
+| What | Canonical repo | Why |
+|------|---------------|-----|
+| Shared intelligence (ops, lore, config, skills) | `frankxai/arcanea` (OSS) | Reusable framework |
+| Product code (webapp, DB, planning state) | `frankxai/arcanea-ai-app` | Product-specific |
+| Claude commands and skills | `frankxai/claude-arcanea` | Agent-specific overlay |
+| OpenCode agents and commands | `frankxai/oh-my-arcanea` | Agent-specific overlay |
+| Standalone CLI (Phase 2) | `frankxai/arcanea-orchestrator` | Future product |
+| Multi-agent routing | `frankxai/arcanea-flow` | Coordination layer |
+
+When building new ops, commands, or shared intelligence: push to OSS first, then sync.
+When building product features: push to arcanea-ai-app only.
+When building agent overlays: push to the agent's dedicated repo.
 
 ---
 
