@@ -1,5 +1,5 @@
 ---
-description: "Arcanea Orchestrator — ops dashboard, promote, digest, coach, cleanup, plan, handover. Usage: /ao [status|promote|digest|coach|cleanup|plan|handover]"
+description: "Arcanea Orchestrator — ops dashboard, promote, digest, coach, cleanup, plan, handover, sync. Usage: /ao [status|promote|digest|coach|cleanup|plan|handover|sync]"
 thinking: true
 ---
 
@@ -23,6 +23,7 @@ Parse `$ARGUMENTS` to determine mode:
 | `cleanup` | **cleanup** |
 | `plan` | **plan** |
 | `handover` | **handover** |
+| `sync` | **sync** |
 | anything else | Treat as **digest** input (the user pasted agent output) |
 
 ## Before Any Mode
