@@ -1,0 +1,49 @@
+$schema: https://arcanea.ai/schema/overlay-manifest/v1.json
+
+name: claude-arcanea
+version: 0.1.0
+description: |
+  Arcanea overlay for Claude Code. Teaches the claude CLI about Arcanea
+  canon, voice, skills, agents, and hooks. Consumes @arcanea/router-spec
+  for model-selection hints and surface-aware routing. Benefits from
+  the Max subscription for unmetered Opus 4.7 usage.
+
+surface: claude-arcanea
+
+runtime:
+  binary: claude
+  minVersion: 2.0.0
+  configDir: ~/.claude
+
+install:
+  - step: copy
+    from: ./commands
+    to: "{configDir}/commands"
+    merge: true
+  - step: copy
+    from: ./skills
+    to: "{configDir}/skills"
+    merge: true
+  - step: copy
+    from: ./agents
+    to: "{configDir}/agents"
+    merge: true
+
+routerSpec:
+  source: "@arcanea/router-spec"
+  reads:
+    - models
+    - tasks
+    - surfaces.claude-arcanea
+
+dependencies:
+  "@arcanea/router-spec": ">=1.0.0"
+
+agents:
+  definitions: ./agents
+  agentsMd: ./AGENTS.md
+
+preview:
+  commands:
+    - cmd: "claude /ao status"
+      description: "Arcanea Orchestrator skill inside Claude Code, router-spec-aware"
